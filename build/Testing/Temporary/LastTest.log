@@ -1,0 +1,29 @@
+Start testing: Apr 25 13:33 EEST
+----------------------------------------------------------
+1/1 Testing: SchedulerTests
+1/1 Test: SchedulerTests
+Command: "/Users/constantinos/low-latency/scheduler/build/tests"
+Directory: /Users/constantinos/low-latency/scheduler/build
+"SchedulerTests" start time: Apr 25 13:33 EEST
+Output:
+----------------------------------------------------------
+      ==========================Process========================
+         PID       Start         End       Burst     Waiting
+           0           0          -1           5           0
+           1           0          -1           3           0
+ 
+Running scheduling
+ 
+      ==========================Process========================
+         PID       Start         End       Burst     Waiting
+           0           0           8           0           3
+           1           0           7           0           4
+<end of output>
+Test time =   0.50 sec
+----------------------------------------------------------
+Test Passed.
+"SchedulerTests" end time: Apr 25 13:33 EEST
+"SchedulerTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 25 13:33 EEST
