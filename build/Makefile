@@ -176,6 +176,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+scheduler.o: scheduler.cpp.o
+.PHONY : scheduler.o
+
+# target to build an object file
+scheduler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/scheduler.cpp.o
+.PHONY : scheduler.cpp.o
+
+scheduler.i: scheduler.cpp.i
+.PHONY : scheduler.i
+
+# target to preprocess a source file
+scheduler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/scheduler.cpp.i
+.PHONY : scheduler.cpp.i
+
+scheduler.s: scheduler.cpp.s
+.PHONY : scheduler.s
+
+# target to generate assembly for a file
+scheduler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/scheduler.cpp.s
+.PHONY : scheduler.cpp.s
+
 tests/test_scheduler.o: tests/test_scheduler.cpp.o
 .PHONY : tests/test_scheduler.o
 
@@ -214,6 +238,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... scheduler.o"
+	@echo "... scheduler.i"
+	@echo "... scheduler.s"
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"
