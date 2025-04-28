@@ -11,7 +11,7 @@ TEST(SchedulerTest, SingleProcessCompletesCorrectly) {
   EXPECT_EQ(proc.waitingTime, 0);
 }
 
-/*TEST(SchedulerTest, TwoProcessesRoundRobin) {
+TEST(SchedulerTest, TwoProcessesRoundRobin) {
   Scheduler *scheduler = new Scheduler(new RoundRobinStrategy(4));
   scheduler->addProcess({0, 0, 4});
   scheduler->addProcess({1, 0, 4});
@@ -20,13 +20,13 @@ TEST(SchedulerTest, SingleProcessCompletesCorrectly) {
   auto p0 = scheduler->getProcess(0);
   auto p1 = scheduler->getProcess(1);
 
-  EXPECT_EQ(p0->endTime, 8);
-  EXPECT_EQ(p1->endTime, 8);
-  EXPECT_EQ(p0->waitingTime + p1->waitingTime, 4);
+  EXPECT_EQ(p0.endTime, 8);
+  EXPECT_EQ(p1.endTime, 8);
+  EXPECT_EQ(p0.waitingTime + p1.waitingTime, 4);
 }
 
 TEST(SchedulerTest, TwoProcessesWithoutOverlap) {
-  Scheduler *scheduler = new Scheduler(new RoundRobingStrategy(4));
+  Scheduler *scheduler = new Scheduler(new RoundRobinStrategy(4));
   scheduler->addProcess({0, 0, 5});
   scheduler->addProcess({1, 0, 3});
 
@@ -35,15 +35,15 @@ TEST(SchedulerTest, TwoProcessesWithoutOverlap) {
   auto p0 = scheduler->getProcess(0);
   auto p1 = scheduler->getProcess(1);
 
-  EXPECT_EQ(p0->endTime, 8);
-  EXPECT_EQ(p1->endTime, 7);
+  EXPECT_EQ(p0.endTime, 8);
+  EXPECT_EQ(p1.endTime, 7);
 
-  EXPECT_EQ(p0->waitingTime, 3);
-  EXPECT_EQ(p0->waitingTime, 4);
+  EXPECT_EQ(p0.waitingTime, 3);
+  EXPECT_EQ(p0.waitingTime, 4);
 }
 
 TEST(SchedulerTest, DifferentStartTimes) {
-  Scheduler *scheduler = new Scheduler(RoundRobinStrategy(4));
+  Scheduler *scheduler = new Scheduler(new RoundRobinStrategy(4));
   scheduler->addProcess({0, 0, 5});
   scheduler->addProcess({1, 0, 3});
 
@@ -52,9 +52,9 @@ TEST(SchedulerTest, DifferentStartTimes) {
   auto p0 = scheduler->getProcess(0);
   auto p1 = scheduler->getProcess(1);
 
-  EXPECT_EQ(p0->endTime, 8);
-  EXPECT_EQ(p1->endTime, 7);
+  EXPECT_EQ(p0.endTime, 8);
+  EXPECT_EQ(p1.endTime, 7);
 
-  EXPECT_EQ(p0->waitingTime, 3);
-  EXPECT_EQ(p0->waitingTime, 4);
-}*/
+  EXPECT_EQ(p0.waitingTime, 3);
+  EXPECT_EQ(p0.waitingTime, 4);
+}

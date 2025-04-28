@@ -32,15 +32,12 @@ public:
                           const size_t runningTime);
 
   Process &getProcess(const unsigned int pid);
-
   size_t processTimeSlice(Process &currentProcess,
                           const unsigned int timeQuantum);
-
   void markProcComplete(const unsigned int idx, const unsigned int currentTime);
 
 public:
   Scheduler(SchedulerStrategy *strat);
-
   ~Scheduler();
 
   std::deque<unsigned int> &getQueue();
@@ -49,18 +46,11 @@ public:
   unsigned int getCurrentTime();
 
   void addProcess(Process proc);
-
-  // Main logic of RR scheduling
   void run();
-
   const Process &getProcess(unsigned int pid) const;
-
   void printProcess(const unsigned int pid);
-
   void printQueue();
-
   void printProcessesMetaData();
-
   void reset();
 };
 
@@ -80,7 +70,6 @@ public:
 };
 
 enum class SchedulerType { RoundRobin };
-
-Scheduler *SchedulerFactory(SchedulerType type); // <--- ONLY Declaration
+Scheduler *SchedulerFactory(SchedulerType type);
 
 #endif // SCHEDULER_HPP

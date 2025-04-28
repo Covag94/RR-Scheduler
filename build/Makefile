@@ -152,77 +152,50 @@ tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
-main.o: main.cpp.o
+# target to build an object file
+main.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/main.o
 .PHONY : main.o
 
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
+# target to preprocess a source file
+main.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/main.i
 .PHONY : main.i
 
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
+# target to generate assembly for a file
+main.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/main.s
 .PHONY : main.s
 
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-scheduler.o: scheduler.cpp.o
+# target to build an object file
+scheduler.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/scheduler.o
 .PHONY : scheduler.o
 
-# target to build an object file
-scheduler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/scheduler.cpp.o
-.PHONY : scheduler.cpp.o
-
-scheduler.i: scheduler.cpp.i
+# target to preprocess a source file
+scheduler.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/scheduler.i
 .PHONY : scheduler.i
 
-# target to preprocess a source file
-scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/scheduler.cpp.i
-.PHONY : scheduler.cpp.i
-
-scheduler.s: scheduler.cpp.s
+# target to generate assembly for a file
+scheduler.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/scheduler.s
 .PHONY : scheduler.s
 
-# target to generate assembly for a file
-scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/scheduler.dir/build.make CMakeFiles/scheduler.dir/scheduler.cpp.s
-.PHONY : scheduler.cpp.s
-
-tests/test_scheduler.o: tests/test_scheduler.cpp.o
+# target to build an object file
+tests/test_scheduler.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test_scheduler.o
 .PHONY : tests/test_scheduler.o
 
-# target to build an object file
-tests/test_scheduler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test_scheduler.cpp.o
-.PHONY : tests/test_scheduler.cpp.o
-
-tests/test_scheduler.i: tests/test_scheduler.cpp.i
+# target to preprocess a source file
+tests/test_scheduler.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test_scheduler.i
 .PHONY : tests/test_scheduler.i
 
-# target to preprocess a source file
-tests/test_scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test_scheduler.cpp.i
-.PHONY : tests/test_scheduler.cpp.i
-
-tests/test_scheduler.s: tests/test_scheduler.cpp.s
-.PHONY : tests/test_scheduler.s
-
 # target to generate assembly for a file
-tests/test_scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test_scheduler.cpp.s
-.PHONY : tests/test_scheduler.cpp.s
+tests/test_scheduler.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test_scheduler.s
+.PHONY : tests/test_scheduler.s
 
 # Help Target
 help:

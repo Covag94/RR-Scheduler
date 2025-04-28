@@ -72,44 +72,44 @@ include CMakeFiles/scheduler.dir/flags.make
 CMakeFiles/scheduler.dir/codegen:
 .PHONY : CMakeFiles/scheduler.dir/codegen
 
-CMakeFiles/scheduler.dir/main.cpp.o: CMakeFiles/scheduler.dir/flags.make
-CMakeFiles/scheduler.dir/main.cpp.o: /Users/constantinos/low-latency/scheduler/main.cpp
-CMakeFiles/scheduler.dir/main.cpp.o: CMakeFiles/scheduler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/constantinos/low-latency/scheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/scheduler.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/scheduler.dir/main.cpp.o -MF CMakeFiles/scheduler.dir/main.cpp.o.d -o CMakeFiles/scheduler.dir/main.cpp.o -c /Users/constantinos/low-latency/scheduler/main.cpp
+CMakeFiles/scheduler.dir/main.o: CMakeFiles/scheduler.dir/flags.make
+CMakeFiles/scheduler.dir/main.o: /Users/constantinos/low-latency/scheduler/main.cpp
+CMakeFiles/scheduler.dir/main.o: CMakeFiles/scheduler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/constantinos/low-latency/scheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/scheduler.dir/main.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/scheduler.dir/main.o -MF CMakeFiles/scheduler.dir/main.o.d -o CMakeFiles/scheduler.dir/main.o -c /Users/constantinos/low-latency/scheduler/main.cpp
 
-CMakeFiles/scheduler.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/scheduler.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/constantinos/low-latency/scheduler/main.cpp > CMakeFiles/scheduler.dir/main.cpp.i
+CMakeFiles/scheduler.dir/main.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/scheduler.dir/main.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/constantinos/low-latency/scheduler/main.cpp > CMakeFiles/scheduler.dir/main.i
 
-CMakeFiles/scheduler.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/scheduler.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/constantinos/low-latency/scheduler/main.cpp -o CMakeFiles/scheduler.dir/main.cpp.s
+CMakeFiles/scheduler.dir/main.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/scheduler.dir/main.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/constantinos/low-latency/scheduler/main.cpp -o CMakeFiles/scheduler.dir/main.s
 
-CMakeFiles/scheduler.dir/scheduler.cpp.o: CMakeFiles/scheduler.dir/flags.make
-CMakeFiles/scheduler.dir/scheduler.cpp.o: /Users/constantinos/low-latency/scheduler/scheduler.cpp
-CMakeFiles/scheduler.dir/scheduler.cpp.o: CMakeFiles/scheduler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/constantinos/low-latency/scheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/scheduler.dir/scheduler.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/scheduler.dir/scheduler.cpp.o -MF CMakeFiles/scheduler.dir/scheduler.cpp.o.d -o CMakeFiles/scheduler.dir/scheduler.cpp.o -c /Users/constantinos/low-latency/scheduler/scheduler.cpp
+CMakeFiles/scheduler.dir/scheduler.o: CMakeFiles/scheduler.dir/flags.make
+CMakeFiles/scheduler.dir/scheduler.o: /Users/constantinos/low-latency/scheduler/scheduler.cpp
+CMakeFiles/scheduler.dir/scheduler.o: CMakeFiles/scheduler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/constantinos/low-latency/scheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/scheduler.dir/scheduler.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/scheduler.dir/scheduler.o -MF CMakeFiles/scheduler.dir/scheduler.o.d -o CMakeFiles/scheduler.dir/scheduler.o -c /Users/constantinos/low-latency/scheduler/scheduler.cpp
 
-CMakeFiles/scheduler.dir/scheduler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/scheduler.dir/scheduler.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/constantinos/low-latency/scheduler/scheduler.cpp > CMakeFiles/scheduler.dir/scheduler.cpp.i
+CMakeFiles/scheduler.dir/scheduler.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/scheduler.dir/scheduler.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/constantinos/low-latency/scheduler/scheduler.cpp > CMakeFiles/scheduler.dir/scheduler.i
 
-CMakeFiles/scheduler.dir/scheduler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/scheduler.dir/scheduler.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/constantinos/low-latency/scheduler/scheduler.cpp -o CMakeFiles/scheduler.dir/scheduler.cpp.s
+CMakeFiles/scheduler.dir/scheduler.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/scheduler.dir/scheduler.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/constantinos/low-latency/scheduler/scheduler.cpp -o CMakeFiles/scheduler.dir/scheduler.s
 
 # Object files for target scheduler
 scheduler_OBJECTS = \
-"CMakeFiles/scheduler.dir/main.cpp.o" \
-"CMakeFiles/scheduler.dir/scheduler.cpp.o"
+"CMakeFiles/scheduler.dir/main.o" \
+"CMakeFiles/scheduler.dir/scheduler.o"
 
 # External object files for target scheduler
 scheduler_EXTERNAL_OBJECTS =
 
-libscheduler.a: CMakeFiles/scheduler.dir/main.cpp.o
-libscheduler.a: CMakeFiles/scheduler.dir/scheduler.cpp.o
+libscheduler.a: CMakeFiles/scheduler.dir/main.o
+libscheduler.a: CMakeFiles/scheduler.dir/scheduler.o
 libscheduler.a: CMakeFiles/scheduler.dir/build.make
 libscheduler.a: CMakeFiles/scheduler.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/constantinos/low-latency/scheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libscheduler.a"
