@@ -5,7 +5,6 @@
 #include <unordered_map>
 #include <vector>
 
-// Forward declarations
 class SchedulerStrategy;
 
 struct Process {
