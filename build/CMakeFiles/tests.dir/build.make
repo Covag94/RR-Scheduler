@@ -72,28 +72,28 @@ include CMakeFiles/tests.dir/flags.make
 CMakeFiles/tests.dir/codegen:
 .PHONY : CMakeFiles/tests.dir/codegen
 
-CMakeFiles/tests.dir/tests/test_scheduler.o: CMakeFiles/tests.dir/flags.make
-CMakeFiles/tests.dir/tests/test_scheduler.o: /Users/constantinos/low-latency/scheduler/tests/test_scheduler.cpp
-CMakeFiles/tests.dir/tests/test_scheduler.o: CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/constantinos/low-latency/scheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tests.dir/tests/test_scheduler.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tests.dir/tests/test_scheduler.o -MF CMakeFiles/tests.dir/tests/test_scheduler.o.d -o CMakeFiles/tests.dir/tests/test_scheduler.o -c /Users/constantinos/low-latency/scheduler/tests/test_scheduler.cpp
+CMakeFiles/tests.dir/tests/test_scheduler.cpp.o: CMakeFiles/tests.dir/flags.make
+CMakeFiles/tests.dir/tests/test_scheduler.cpp.o: /Users/constantinos/low-latency/scheduler/tests/test_scheduler.cpp
+CMakeFiles/tests.dir/tests/test_scheduler.cpp.o: CMakeFiles/tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/constantinos/low-latency/scheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tests.dir/tests/test_scheduler.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tests.dir/tests/test_scheduler.cpp.o -MF CMakeFiles/tests.dir/tests/test_scheduler.cpp.o.d -o CMakeFiles/tests.dir/tests/test_scheduler.cpp.o -c /Users/constantinos/low-latency/scheduler/tests/test_scheduler.cpp
 
-CMakeFiles/tests.dir/tests/test_scheduler.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tests.dir/tests/test_scheduler.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/constantinos/low-latency/scheduler/tests/test_scheduler.cpp > CMakeFiles/tests.dir/tests/test_scheduler.i
+CMakeFiles/tests.dir/tests/test_scheduler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tests.dir/tests/test_scheduler.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/constantinos/low-latency/scheduler/tests/test_scheduler.cpp > CMakeFiles/tests.dir/tests/test_scheduler.cpp.i
 
-CMakeFiles/tests.dir/tests/test_scheduler.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tests.dir/tests/test_scheduler.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/constantinos/low-latency/scheduler/tests/test_scheduler.cpp -o CMakeFiles/tests.dir/tests/test_scheduler.s
+CMakeFiles/tests.dir/tests/test_scheduler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tests.dir/tests/test_scheduler.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/constantinos/low-latency/scheduler/tests/test_scheduler.cpp -o CMakeFiles/tests.dir/tests/test_scheduler.cpp.s
 
 # Object files for target tests
 tests_OBJECTS = \
-"CMakeFiles/tests.dir/tests/test_scheduler.o"
+"CMakeFiles/tests.dir/tests/test_scheduler.cpp.o"
 
 # External object files for target tests
 tests_EXTERNAL_OBJECTS =
 
-tests: CMakeFiles/tests.dir/tests/test_scheduler.o
+tests: CMakeFiles/tests.dir/tests/test_scheduler.cpp.o
 tests: CMakeFiles/tests.dir/build.make
 tests: libscheduler.a
 tests: /opt/homebrew/lib/libgtest_main.a

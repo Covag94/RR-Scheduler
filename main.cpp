@@ -6,10 +6,12 @@ int main() {
   Scheduler *scheduler = new Scheduler(new RoundRobinStrategy(4));
 
   // Add simulated processes
-  scheduler->addProcess({0, 0, 5}); // pid, start, burst
-  scheduler->addProcess({1, 0, 3});
-  scheduler->addProcess({2, 4, 7});
+  //  scheduler->addProcess({0, 0, 5}); // pid, start, burst
+  // scheduler->addProcess({1, 0, 3});
+  // scheduler->addProcess({2, 4, 7});
 
+  scheduler->addProcess({0, 0, 0});
+  scheduler->getProcess(0);
   //  scheduler->printQueue();
 
   std::cout << " " << std::endl;

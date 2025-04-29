@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/scheduler.dir/main.o"
-  "CMakeFiles/scheduler.dir/main.o.d"
-  "CMakeFiles/scheduler.dir/scheduler.o"
-  "CMakeFiles/scheduler.dir/scheduler.o.d"
+  "CMakeFiles/scheduler.dir/main.cpp.o"
+  "CMakeFiles/scheduler.dir/main.cpp.o.d"
+  "CMakeFiles/scheduler.dir/scheduler.cpp.o"
+  "CMakeFiles/scheduler.dir/scheduler.cpp.o.d"
   "libscheduler.a"
   "libscheduler.pdb"
 )
