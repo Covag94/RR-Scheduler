@@ -67,11 +67,11 @@ TEST(SchedulerTest, ZeroBurstProcessIgnored) {
 
 TEST(SchedulerTest, ProcessStartsLaterJumpsTime) {
   Scheduler scheduler(new RoundRobinStrategy(4));
-  scheduler.addProcess({0, 5, 2});  // Starts at t=5
-  scheduler.addProcess({1, 10, 2}); // Starts at t=10
+  scheduler.addProcess({0, 5, 2});
+  scheduler.addProcess({1, 10, 2});
   scheduler.run();
 
-  EXPECT_EQ(scheduler.getCurrentTime(), 14); // 5-6: P0, 10-12: P1
+  EXPECT_EQ(scheduler.getCurrentTime(), 12); // 5-6: P0, 10-12: P1
 }
 
 TEST(SchedulerTest, ExactQuantumCompletion) {
@@ -95,16 +95,21 @@ TEST(SchedulerTest, ProcessRequiresMultipleQuanta) {
 }
 
 TEST(SchedulerTest, ThreeProcessesRoundRobinOrder) {
-  Scheduler scheduler(new RoundRobinStrategy(2)); // Smaller quantum
-  scheduler.addProcess({0, 0, 3});
-  scheduler.addProcess({1, 0, 3});
-  scheduler.addProcess({2, 0, 3});
-  scheduler.run();
+  Scheduler *scheduler =
+      new Scheduler(new RoundRobinStrategy(2)); // Smaller quantum
+  scheduler->addProcess({0, 0, 3});
+  scheduler->addProcess({1, 0, 3});
+  scheduler->addProcess({2, 0, 3});
+  scheduler->run();
 
   // Expected execution order: 0,1,2,0,1,2,0,1,2
-  EXPECT_EQ(scheduler.getProcess(0).endTime, 9);
-  EXPECT_EQ(scheduler.getProcess(1).endTime, 9);
-  EXPECT_EQ(scheduler.getProcess(2).endTime, 9);
+  EXPECT_EQ(scheduler->getProcess(0).endTime, 7);
+  EXPECT_EQ(scheduler->getProcess(1).endTime, 8);
+  EXPECT_EQ(scheduler->getProcess(2).endTime, 9);
+
+  EXPECT_EQ(scheduler->getProcess(0).waitingTime, 4);
+  EXPECT_EQ(scheduler->getProcess(1).waitingTime, 5);
+  EXPECT_EQ(scheduler->getProcess(2).waitingTime, 6);
 }
 
 TEST(SchedulerTest, WaitingTimeAccumulation) {
@@ -136,9 +141,6 @@ TEST(SchedulerTest, LateArrivingProcess) {
   scheduler.addProcess({1, 3, 2}); // Arrives at t=3
   scheduler.run();
 
-  // Timeline:
-  // t0-2: P0 completes
-  // t3: P1 arrives and runs t3-5
   EXPECT_EQ(scheduler.getProcess(0).endTime, 2);
   EXPECT_EQ(scheduler.getProcess(1).endTime, 5);
 }
@@ -150,14 +152,7 @@ TEST(SchedulerTest, MixedArrivalTimes) {
   scheduler.addProcess({2, 5, 2}); // Arrives at t=5
   scheduler.run();
 
-  /* Expected timeline:
-     t0-3: P0 runs (remaining 2)
-     t3: P1 arrives at t2 but already in queue?
-     t3-6: P1 runs (remaining 1)
-     t6-8: P2 runs (complete)
-     t8-10: P0 remaining
-     t10-11: P1 remaining */
-  EXPECT_EQ(scheduler.getProcess(0).endTime, 10);
+  EXPECT_EQ(scheduler.getProcess(0).endTime, 8);
   EXPECT_EQ(scheduler.getProcess(1).endTime, 11);
-  EXPECT_EQ(scheduler.getProcess(2).endTime, 8);
+  EXPECT_EQ(scheduler.getProcess(2).endTime, 10);
 }
