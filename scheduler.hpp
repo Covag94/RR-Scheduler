@@ -32,7 +32,7 @@ public:
 
   Process &getProcess(const unsigned int pid);
   size_t processTimeSlice(Process &currentProcess,
-                          const unsigned int timeQuantum);
+                          const unsigned int timeQuantum, const std::vector<size_t>& sortedIndices, size_t& nextToPush);
   void markProcComplete(const unsigned int idx, const unsigned int currentTime);
 
 public:
