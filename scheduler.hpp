@@ -1,5 +1,4 @@
-#ifndef SCHEDULER_HPP
-#define SCHEDULER_HPP
+#pragma once
 
 #include <deque>
 #include <unordered_map>
@@ -70,5 +69,3 @@ public:
 
 enum class SchedulerType { RoundRobin };
 Scheduler *SchedulerFactory(SchedulerType type);
-
-#endif // SCHEDULER_HPP
